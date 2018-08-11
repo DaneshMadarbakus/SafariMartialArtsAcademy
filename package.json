@@ -5,12 +5,12 @@
   "main": "index.js",
   "gulp": {
     "src": {
-      "js": "Scripts/custom/",
-      "jsVendors": "Scripts/vendors/",
-      "scss": "Content/sass/",
-      "images": "Content/images/",
+      "js": "scripts/custom/",
+      "jsVendors": "scripts/vendors/",
+      "scss": "sass/",
+      "images": "images/",
       "html": "Flat/",
-      "dist": "Dist/"
+      "dist": "dist/"
     },
     "selectors": {
       "all": "*",
