@@ -1,0 +1,209 @@
+﻿//NAV
+.main-nav {
+    position: fixed;
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0vw;
+        height: 0vh;
+        background-color: color(secondary);
+        opacity: 0;
+        @include vendor-prefix(transition, opacity 0.6s ease-in-out);
+    }
+
+    .main-nav-container {
+        background-color: color(secondary);
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 65px;
+        min-height: 45px;
+        @include vendor-prefix(transition, all 0.6s ease-in-out);
+
+        &:after {
+            content: "";
+            border-style: solid;
+            border-width: 0 800px 320px 0;
+            border-color: transparent color(secondary) transparent transparent;
+            position: absolute;
+            left: 0;
+            bottom: -320px;
+            @include vendor-prefix(transition, border-color 0.6s ease-in-out);
+        }
+
+        .burger {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            display: inline-block;
+            width: $burger-size * 1.2;
+            height: $burger-size;
+            cursor: pointer;
+
+            span, span:before, span:after {
+                display: block;
+                width: 100%;
+                height: $burger-size / 5;
+                background: $white;
+                @include vendor-prefix(transition, all 0.6s ease-in-out);
+                backface-visibility: hidden;
+            }
+
+            span {
+                position: relative;
+                margin: ($burger-size * 2 / 5) 0 0;
+            }
+
+            span:before, span:after {
+                position: absolute;
+                content: "";
+            }
+
+            span:before {
+                top: $burger-size * -2 / 5;
+            }
+
+            span:after {
+                top: $burger-size * 2 / 5;
+            }
+        }
+
+        .nav-items {
+            display: none;
+
+            li > a {
+                color: color(secondary);
+                text-decoration: none;
+            }
+
+            & > li {
+                & > ul {
+                    padding-left: 20px;
+                    font-family: $highlight;
+                }
+            }
+        }
+    }
+
+    &.open {
+        .overlay {
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.8;
+        }
+
+        .main-nav-container {
+            width: 100%;
+            min-height: 500px;
+            background-color: $white;
+
+            @include min($bp-sm) {
+                width: 700px;
+            }
+
+            .nav-items {
+                display: block;
+                padding-top: 100px;
+                padding-left: 20px;
+
+                @include min($bp-sm) {
+                    padding-left: 200px;
+                }
+            }
+
+            &:after {
+                border-color: transparent $white transparent transparent;
+            }
+
+            .burger {
+                span, span:before, span:after {
+                    background: color(secondary);
+                }
+
+                span:before {
+                    -webkit-transform: translate(0px, ($burger-size * 2 / 5)) rotate(-45deg);
+                    transform: translate(0px, ($burger-size * 2 / 5)) rotate(-45deg);
+                }
+
+                span:after {
+                    -webkit-transform: translate(0px, -($burger-size * 2 / 5)) rotate(45deg);
+                    transform: translate(0px, -($burger-size * 2 / 5)) rotate(45deg);
+                }
+
+                span {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+//Header
+header {
+    .logo {
+        display: block;
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    margin-bottom: 200px;
+    margin-top: 200px;
+}
+
+//Color  Blocks
+.color-block {
+    margin-bottom: 20px;
+    padding: 20px;
+    color: $white;
+
+    .get-hex {
+        text-transform: uppercase;
+    }
+
+    h5, ul li {
+        margin: 0;
+        padding: 0;
+        color: $white;
+    }
+
+    & > .color-block {
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+//Examples
+.code-example {
+    background-color: lighten(color(primary),52);
+    padding: 15px;
+    margin-bottom: 20px;
+
+    .code-example--output {
+        background-color: $white;
+        padding: 20px;
+
+        pre {
+            margin: 0;
+        }
+    }
+
+    .code-example--code {
+        padding: 0 20px;
+        max-width: 100%;
+        overflow-x: overlay;
+        pre {
+            margin: 0;
+        }
+    }
+}
+span.code {
+    background-color: lighten(color(primary),52);
+    padding: 3px 7px;
+}

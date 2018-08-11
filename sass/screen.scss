@@ -1,0 +1,33 @@
+﻿//Call BS before in case variables clash remember need to use an autoprefixer on the css
+//@import "vendors/bootstrap4.0.0.b2/_bootstrap-reboot";
+@import "vendors/bootstrap4.0.0.b2/_bootstrap-grid";
+//@import "vendors/bootstrap4.0.0.b2/_bootstrap"; //Can cherry pick in this file for functionality need bootstrap.js and popper.js
+//@import "helpers/bootstrap-overrides/bootsrap-grid-secondary"; //Addons to add an other grid base 10
+
+@import "base/functions";
+@import "base/variables";
+@import "base/normalize";
+@import "base/mixins";
+
+//@import "vendors/saffron/saffron";                // https://github.com/colindresj/saffron
+//@import "vendors/family/family";                  // https://github.com/LukyVj/family.scss
+//@import "vendors/font-awesome";
+//@import "vendors/hover/hover";                    // https://github.com/IanLunn/Hover
+//@import "vendors/owl-carousel/owl-carousel";      // https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
+//@import "vendors/modaal/modaal";                  // https://github.com/humaan/Modaal
+
+@import "helpers/fonts";
+@import "helpers/z-index";
+@import "helpers/font-sizes";
+//Overrides
+@import "helpers/bootstrap-overrides/bootsrap-grid-secondary"; //Base 10
+
+@import "components/bg";
+@import "components/btns-links";
+@import "components/form-elements";
+@import "components/responsive";
+@import "components/text";
+@import "components/titles";
+
+// @import "partials/examples";
+@import "pages/demo";                     // demo use

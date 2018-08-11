@@ -1,0 +1,33 @@
+﻿//Use map in Variables
+
+html {
+    @include font-size($base-font-sizes);
+}
+
+p, ul li {
+    @include font-size($p-font-sizes);
+}
+
+h1, .heading1 {
+    @include font-size($h1-font-sizes);
+}
+
+h2, .heading2 {
+    @include font-size($h2-font-sizes);
+}
+
+h3, .heading3 {
+    @include font-size($h3-font-sizes);
+}
+
+h4, .heading4 {
+    @include font-size($h4-font-sizes);
+}
+
+h5, .heading5 {
+    @include font-size($h5-font-sizes);
+}
+
+h6, .heading6 {
+    @include font-size($h6-font-sizes);
+}

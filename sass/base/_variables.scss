@@ -1,0 +1,130 @@
+﻿// Breakpoints shared with BS4
+$bp-ms: strip-unit(map-get($grid-breakpoints, ms));
+$bp-ms-max: strip-unit(map-get($grid-breakpoints, ms)) - 1;
+$bp-sm: strip-unit(map-get($grid-breakpoints, sm));
+$bp-sm-max: strip-unit(map-get($grid-breakpoints, sm)) - 1;
+$bp-md: strip-unit(map-get($grid-breakpoints, md));
+$bp-md-max: strip-unit(map-get($grid-breakpoints, md)) - 1;
+$bp-lg: strip-unit(map-get($grid-breakpoints, lg));
+/*$bp-ms: 480;
+$bp-ms-max: 479;
+$bp-sm: 768;
+$bp-sm-max: 767;
+$bp-md: 992;
+$bp-md-max: 991;
+$bp-lg: 1200;*/
+
+// map for the font mixin if not using BS4 grid
+//$grid-breakpoints: ( ms: $bp-ms, sm: $bp-sm, md: $bp-md, lg: $bp-lg );
+
+// Colours
+$white: #ffffff;
+$black: #000000;
+$blue: #4a7e9e;
+$blue-purple: #4c5b8b;
+$yellow: #d3b353;
+$yellow-light: #efe5ce;
+$red: #c65555;
+$grey: #d8e1e7;
+$transparent: transparent;
+
+// Themes, exemple use https://www.sassmeister.com/gist/69658bc9c7b340797312 Generate btn and bg colors
+$themes: (
+    primary: (
+        base: $blue-purple,
+        darken: darken($blue-purple, 20%),
+        lighten: lighten($blue-purple, 20%),
+        contrast: $white
+    ),
+    secondary: (
+        base: $red,
+        darken: darken($red, 20%),
+        lighten: lighten($red, 20%),
+        contrast: $white
+    ),
+);
+
+$themes-light: (
+    primary: (
+        20: lighten(map-deep-get($themes, 'primary', 'base'), 20%),
+        40: lighten(map-deep-get($themes, 'primary', 'base'), 40%),
+        60: lighten(map-deep-get($themes, 'primary', 'base'), 60%),
+        80: lighten(map-deep-get($themes, 'primary', 'base'), 80%),
+    ),
+    secondary: (
+        20: lighten(map-deep-get($themes, 'secondary', 'base'), 20%),
+        40: lighten(map-deep-get($themes, 'secondary', 'base'), 40%),
+        60: lighten(map-deep-get($themes, 'secondary', 'base'), 60%),
+        80: lighten(map-deep-get($themes, 'secondary', 'base'), 80%),
+    ),
+);
+
+$themes-dark: (
+    primary: (
+        20: darken(map-deep-get($themes, 'primary', 'base'), 20%),
+        40: darken(map-deep-get($themes, 'primary', 'base'), 40%),
+        60: darken(map-deep-get($themes, 'primary', 'base'), 60%),
+        80: darken(map-deep-get($themes, 'primary', 'base'), 80%),
+    ),
+    secondary: (
+        20: darken(map-deep-get($themes, 'secondary', 'base'), 20%),
+        40: darken(map-deep-get($themes, 'secondary', 'base'), 40%),
+        60: darken(map-deep-get($themes, 'secondary', 'base'), 60%),
+        80: darken(map-deep-get($themes, 'secondary', 'base'), 80%),
+    ),
+);
+
+// Fonts
+$basefont-size: 16;                    // Used in "em" function for media query min() and max() mixins
+$base-font-size-mobile-px: 17px;
+$base-font-size-px: 16px;
+
+// Values for each breakpoint can be single (font-size) or and array of items (all optional but need to be in order:
+// (fontSize, LineHeight, FontWeight, LetterSpacing, style, margin)
+// eg  (3.5rem, 1.2, 500, 1px, italic, 0 0 20px)
+// passing null as a value skips that property
+// Font sizing are called in helpers
+$base-font-sizes: (
+    //Set for REM use PX here
+    base: ($base-font-size-mobile-px, 1.5, 400),
+    sm: ($base-font-size-px),
+); 
+$p-font-sizes: (
+    base: (1.125rem, 1.6, null, null, null, 0 0 0.5rem),
+    sm: (1rem, 1.7),
+);
+$h1-font-sizes: (
+    base: (2.667rem, null, null, null, null, 0 0 1rem),
+);
+$h2-font-sizes: (
+    base: (1.556rem),
+);
+$h3-font-sizes: (
+    base: (1.556rem, null, 300),
+);
+$h4-font-sizes: (
+    base: (1.50rem),
+);
+$h5-font-sizes: (
+    base: (1.25rem),
+);
+$h6-font-sizes: (
+    base: (1rem),
+);
+
+// Font Family
+$paragraph: 'Lato', Arial, "Helvetica Neue", Helvetica, sans-serif;
+$title: 'Ubuntu', Arial, "Helvetica Neue", Helvetica, sans-serif;
+$highlight: 'Ubuntu', Arial, "Helvetica Neue", Helvetica, sans-serif;
+/*$icons: ;*/
+
+//z-indexes
+//explaination in helpers/functions
+$z-indexes: (
+    "main-nav", //output 30
+    "dropdown-menu", //output 20
+    "content" //output 10
+);
+
+//Sizes
+$burger-size: 20px;

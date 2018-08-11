@@ -1,0 +1,39 @@
+a {
+    color: color(secondary);
+    text-decoration: none;
+
+    @include hover-focus {
+        color: color(secondary, darken);
+        text-decoration: underline;
+    }
+}
+
+// Button base
+.btn {
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    @include vendor-prefix(user-select, none);
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0rem;
+    @include vendor-prefix(transition, all 0.6s ease-in-out);
+}
+
+// Button color variations
+@each $name, $theme in $themes {
+    .btn-#{$name} {
+        color: map-get($theme, 'contrast');
+        background: map-get($theme, 'base');
+
+        @include hover-focus {
+            background: map-get($theme, 'lighten');
+            color: map-get($theme, 'darken');
+        }
+    }
+}

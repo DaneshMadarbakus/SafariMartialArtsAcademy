@@ -1,0 +1,33 @@
+// text color variations
+@each $name, $theme in $themes {
+    .text-#{$name} {
+        color: map-get($theme, 'base');
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.list-unstyled {
+    list-style-type: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid $black;
+}
