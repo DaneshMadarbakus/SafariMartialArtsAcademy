@@ -4,13 +4,13 @@
 const gulp = require('gulp');
 const bundle = require('gulp-bundle-assets');
 
-const output = './Dist/js';
+const output = './dist/js';
 
 
 const buildJs = () => {
-    return gulp.src('./bundle-config.js')
-        .pipe(bundle())
-        .pipe(gulp.dest(output));
+  return gulp.src('./bundle-config.js')
+    .pipe(bundle())
+    .pipe(gulp.dest(output));
 };
 
 gulp.task('build-js', buildJs);
