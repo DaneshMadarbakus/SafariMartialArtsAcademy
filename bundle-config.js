@@ -6,7 +6,7 @@ module.exports = {
   bundle: {
     scriptsBundleMain: {
       scripts: [
-        './scripts/custom/demo.js'
+        './scripts/custom/smooth-scroll.js'
       ],
       options: {
         rev: false, // {(boolean|string|Array)}
