@@ -1,0 +1,24 @@
+.gallery-grid{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .gallery-box{
+    width:32%;
+    margin-top: 3rem;
+    // overflow: hidden;gulp
+
+    .img-holder{
+      padding-bottom:100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

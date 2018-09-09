@@ -20,6 +20,7 @@ $bp-lg: 1200;*/
 // Colours
 $white: #ffffff;
 $black: #000000;
+$primary: #c65555;
 $blue: #4a7e9e;
 $blue-purple: #4c5b8b;
 $yellow: #d3b353;
@@ -31,9 +32,9 @@ $transparent: transparent;
 // Themes, exemple use https://www.sassmeister.com/gist/69658bc9c7b340797312 Generate btn and bg colors
 $themes: (
     primary: (
-        base: $blue-purple,
-        darken: darken($blue-purple, 20%),
-        lighten: lighten($blue-purple, 20%),
+        base: $primary,
+        darken: darken($primary, 20%),
+        lighten: lighten($primary, 20%),
         contrast: $white
     ),
     secondary: (
@@ -94,13 +95,13 @@ $p-font-sizes: (
     sm: (1rem, 1.7),
 );
 $h1-font-sizes: (
-    base: (2.667rem, null, null, null, null, 0 0 1rem),
+    base: (4rem, null, null, null, null, 0 0 1rem),
 );
 $h2-font-sizes: (
-    base: (1.556rem),
+    base: (3.5rem),
 );
 $h3-font-sizes: (
-    base: (1.556rem, null, 300),
+    base: (2.5rem, null, 300),
 );
 $h4-font-sizes: (
     base: (1.50rem),
@@ -113,9 +114,9 @@ $h6-font-sizes: (
 );
 
 // Font Family
-$paragraph: 'Lato', Arial, "Helvetica Neue", Helvetica, sans-serif;
-$title: 'Ubuntu', Arial, "Helvetica Neue", Helvetica, sans-serif;
-$highlight: 'Ubuntu', Arial, "Helvetica Neue", Helvetica, sans-serif;
+$paragraph: 'Open Sans', 'Lato', Arial, "Helvetica Neue", Helvetica, sans-serif;
+$title: 'Raleway', 'Ubuntu', Arial, "Helvetica Neue", Helvetica, sans-serif;
+$highlight: 'Raleway', 'Ubuntu', Arial, "Helvetica Neue", Helvetica, sans-serif;
 /*$icons: ;*/
 
 //z-indexes

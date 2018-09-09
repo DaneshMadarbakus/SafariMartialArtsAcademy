@@ -1,0 +1,16 @@
+nav{
+  background:$white;
+  box-shadow: -8px 16px 15px rgba(0,0,0,.13);
+  .navbar-brand{
+    color: $black;
+  }
+  a{
+    color: $black;
+    &:hover{
+      color:$primary;
+    }
+    &.active{
+      color: $primary;
+    }
+  }
+}
