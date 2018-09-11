@@ -18,15 +18,15 @@ $bp-lg: 1200;*/
 //$grid-breakpoints: ( ms: $bp-ms, sm: $bp-sm, md: $bp-md, lg: $bp-lg );
 
 // Colours
-$white: #ffffff;
-$black: #000000;
-$primary: #c65555;
-$blue: #4a7e9e;
-$blue-purple: #4c5b8b;
-$yellow: #d3b353;
-$yellow-light: #efe5ce;
-$red: #c65555;
-$grey: #d8e1e7;
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$primary: hsl(0, 50%, 55%);
+$blue: hsl(203, 36%, 45%);
+$blue-purple: hsl(226, 29%, 42%);
+$yellow: hsl(45, 59%, 58%);
+$yellow-light: hsl(42, 51%, 87%);
+$red: hsl(0, 50%, 55%);
+$grey: hsl(204, 24%, 88%);
 $transparent: transparent;
 
 // Themes, exemple use https://www.sassmeister.com/gist/69658bc9c7b340797312 Generate btn and bg colors
@@ -91,11 +91,11 @@ $base-font-sizes: (
     sm: ($base-font-size-px),
 ); 
 $p-font-sizes: (
-    base: (1.125rem, 1.6, null, null, null, 0 0 0.5rem),
+    base: (1rem, 1.6, null, null, null, 0 0 0.5rem),
     sm: (1rem, 1.7),
 );
 $h1-font-sizes: (
-    base: (4rem, null, null, null, null, 0 0 1rem),
+    base: (1.375rem, null, null, null, null, 0 0 0rem),
 );
 $h2-font-sizes: (
     base: (3.5rem),

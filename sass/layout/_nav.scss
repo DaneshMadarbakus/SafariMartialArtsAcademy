@@ -1,16 +1,20 @@
-nav{
-  background:$white;
-  box-shadow: -8px 16px 15px rgba(0,0,0,.13);
-  .navbar-brand{
-    color: $black;
-  }
-  a{
-    color: $black;
-    &:hover{
-      color:$primary;
+nav {
+    background: $white;
+    box-shadow: -8px 16px 15px rgba(0,0,0,.13);
+
+    .navbar-brand {
+        color: $black;
     }
-    &.active{
-      color: $primary;
+
+    a {
+        color: $black !important;
+
+        &:hover {
+            color: $primary !important;
+        }
+
+        &.active {
+            color: $primary !important;
+        }
     }
-  }
 }

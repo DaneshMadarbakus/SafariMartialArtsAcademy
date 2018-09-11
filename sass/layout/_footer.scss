@@ -12,6 +12,11 @@ footer{
       height:30px;
       width: 30px;
       margin-right: 0.5rem;
+      margin-bottom: 0.25rem; 
+
+      @include min(400){
+          margin-bottom:0;
+      }
     }
     svg{
 
