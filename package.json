@@ -45,6 +45,8 @@
     "gulp-strip-comments": "^2.5.1",
     "gulp-util": "^3.0.8",
     "lazypipe": "^1.0.1",
-    "require-dir": "^0.3.1"
+    "require-dir": "^0.3.1",
+    "hoek": ">=4.2.1",
+    "cryptiles": ">=4.1.2"
   }
 }
