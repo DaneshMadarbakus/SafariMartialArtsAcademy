@@ -1,0 +1,57 @@
+// Bg color variations
+@each $name, $theme in $themes {
+    .bg-#{$name} {
+        background: map-get($theme, 'base');
+        color: map-get($theme, 'contrast');
+    }
+}
+
+// Bg light color variations
+@each $name, $theme in $themes-light {
+    .bg-#{$name}-light-20 {
+        background: map-get($theme, 20);
+    }
+}
+
+@each $name, $theme in $themes-light {
+    .bg-#{$name}-light-40 {
+        background: map-get($theme, 40);
+    }
+}
+
+@each $name, $theme in $themes-light {
+    .bg-#{$name}-light-60 {
+        background: map-get($theme, 60);
+    }
+}
+
+@each $name, $theme in $themes-light {
+    .bg-#{$name}-light-80 {
+        background: map-get($theme, 80);
+    }
+}
+
+// Bg dark color variations
+@each $name, $theme in $themes-dark {
+    .bg-#{$name}-dark-20 {
+        background: map-get($theme, 20);
+    }
+}
+
+@each $name, $theme in $themes-dark {
+    .bg-#{$name}-dark-40 {
+        background: map-get($theme, 40);
+    }
+}
+
+@each $name, $theme in $themes-dark {
+    .bg-#{$name}-dark-60 {
+        background: map-get($theme, 60);
+    }
+}
+
+@each $name, $theme in $themes-dark {
+    .bg-#{$name}-dark-80 {
+        background: map-get($theme, 80);
+    }
+}

@@ -1,0 +1,31 @@
+footer{
+  background:black;
+  padding-top: 1.25rem;
+  padding-bottom:1.25rem;
+  .footer-holder{
+    display:flex;
+    justify-content: space-between;
+  }
+  div{
+    a{
+      display:inline-block;
+      height:30px;
+      width: 30px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.25rem; 
+
+      @include min(400){
+          margin-bottom:0;
+      }
+    }
+    svg{
+
+      width:100%;
+      fill:#fff;
+    }
+    p{
+      color: $white;
+      margin:0;
+    }
+  }
+}
